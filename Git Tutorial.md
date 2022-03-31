@@ -10,7 +10,6 @@ Step 2 - Open Command Line App
 -----------
 After you have created a new repository, open up Terminal or cmd on your computer. You want to navigate to the directory in your computer that has your project in it. The command to navigate to the directory is:
 
-
 Windows: 
 `cd/directory_name_where_project_is`
 
@@ -94,7 +93,9 @@ To **ADD** the commits you have made to the file and **DELETE** the stash you cr
 
 This will reapply the most recent created stash and it will delete it from the stack.
 
-If you want to pop a specific stash, use: 
+![Stash pop and apply picture](https://www.becomebetterprogrammer.com/wp-content/uploads/2022/01/Git-stash-apply-vs-pop.png)
+
+If you want to **POP** a specific stash, use: 
 
 `git stash pop stash@{2}`
 
@@ -112,15 +113,19 @@ To create a **BRANCH** for your stash, use the command:
 
 `git stash branch <name> stash@{#_stash}`
 
-This command helps when there are conflicts when adding or popping your stash. 
+This command helps when there are conflicts when adding or popping your stash. It creates a new branch with the specific stash you apply to it.
 
 To **CLEAR** (delete) all the stashes made, use the command:
 
 `git stash clear`
 
+This command will clear the entire stack of stashes.
+
 To **DROP** a specific stash created, use the command:
 
 `git stash drop stash@{#_stash}`
+
+![Git Stash Drop](https://static.javatpoint.com/tutorial/git/images/git-stash14.png)
 
 
 Branching in Git
