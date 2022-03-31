@@ -122,8 +122,10 @@ This will set the upstream branch to be pushed to the remote repository so it ca
 ![Merge Remote Repository](https://devconnected.com/wp-content/uploads/2019/10/upstream-1-1024x702.png)
 
 To update the main branch you have been working on if the original author makes changes, use the commands:
+
 `git checkout <branch_name>`
 `git merge main`
+
 Doing these commands will update your branch with the new work that was added to it from other people. It will keep your branch up to date with the new content.
 ![Update Main Branch](https://info.varonis.com/hubfs/Imported_Blog_Media/git-merge-to-branch-2.png)
 
