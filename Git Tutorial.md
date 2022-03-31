@@ -68,6 +68,7 @@ You can also stash a file with a message using the command:
 
 `git stash save "Your message"`
 
+---
 To see the **LIST** of stashes you have made use the command: 
 
 `git stash list`
@@ -75,6 +76,8 @@ To see the **LIST** of stashes you have made use the command:
 The most recent stash is listed at the top and you can view the message you created (if applicable).
 ![Stash List](https://cdn-media-1.freecodecamp.org/images/757jZHhanVirv5F5ZBeTXi2XNVPyAhOmDgwV)
 
+
+---
 To **ADD** the commits you have made back to the file, you can do: 
 
 `git stash apply` 
@@ -87,6 +90,7 @@ To specifically pick a stash to apply to a file, use the command:
 
 Doing these ADD commands won't delete the stashes and will keep them on the stack.
 
+---
 To **ADD** the commits you have made to the file and **DELETE** the stash you created, you can use the command:
 
 `git stash pop` 
@@ -95,32 +99,39 @@ This will reapply the most recent created stash and it will delete it from the s
 
 ![Stash pop and apply picture](https://www.becomebetterprogrammer.com/wp-content/uploads/2022/01/Git-stash-apply-vs-pop.png)
 
+
+---
 If you want to **POP** a specific stash, use: 
 
 `git stash pop stash@{2}`
 
+---
 To **SHOW** the stash summary, use the command:
 
 `git stash show`
 
 ![Stash Show](https://cdn-media-1.freecodecamp.org/images/W6tFM8O0xrUfFznYg9O-mvAND4zNDX2R-RFc)
 
+
 If you want to see the full diff of a stash use the command:
 
 `git stash show -p`
 
+---
 To create a **BRANCH** for your stash, use the command:
 
 `git stash branch <name> stash@{#_stash}`
 
 This command helps when there are conflicts when adding or popping your stash. It creates a new branch with the specific stash you apply to it.
 
+---
 To **CLEAR** (delete) all the stashes made, use the command:
 
 `git stash clear`
 
 This command will clear the entire stack of stashes.
 
+---
 To **DROP** a specific stash created, use the command:
 
 `git stash drop stash@{#_stash}`
@@ -138,6 +149,7 @@ To **CREATE** a Branch, use the command:
 
 Doing this command only will create the new branch so if you want to add commits to it, you need to use checkout to switch to the branch.
 
+---
 To **CHECKOUT** the branch use the command:
 
 `git checkout -b <branch_name>`
@@ -149,6 +161,7 @@ Now you can use git add and git commit commands to the new branch. The checkout 
 ![Git Checkout Graph](https://static.javatpoint.com/tutorial/git/images/git-checkout.png)
 
 
+---
 To **LIST** all the branches in the repository, use the command:
 
 `git branch` or `git branch --list`
@@ -157,6 +170,8 @@ The command will list all the branches in the local repository on your computer 
 
 ![Git branch list example](https://www.jquery-az.com/wp-content/uploads/2018/06/5.0_3-show-branches-local.png)
 
+
+---
 To **DELETE** a branch after you have finished working on it, use the command:
 
 `git branch -d <name_of_branch>` for local branch deletion
@@ -167,11 +182,13 @@ This command won't delete the branch if it hasn't been merged yet and if you hav
 ![Git delete branch](https://www.educative.io/api/edpresso/shot/5020482594144256/image/5154462085677056)
 
 
+---
 To **FORCE DELETE** a branch with unmerged changes, use the command:
 
 `git branch -D <name_of_branch>`
 
 This command will delete the local branch without having to push or merge the branch beforehand. 
+
 
 Merging in Git
 ----
@@ -187,6 +204,7 @@ The merge command allows you to take the changes/commits you made and integrate 
 ![Merge Visualisation](https://miro.medium.com/max/800/1*iB8lNrITmLvKeL8mnp3qAA.png)
 
 
+---
 To Merge a branch to a Remote Repository, use the command: 
 
 `git push --set-upstream origin <branch_name>`
@@ -196,6 +214,7 @@ This will set the upstream branch to be pushed to the remote repository so it ca
 ![Merge Remote Repository](https://devconnected.com/wp-content/uploads/2019/10/upstream-1-1024x702.png)
 
 
+---
 To update the main branch you have been working on if the original author makes changes, use the commands:
 
 `git checkout <branch_name>`
