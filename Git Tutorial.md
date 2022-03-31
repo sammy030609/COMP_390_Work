@@ -113,14 +113,19 @@ Merging in Git is when you have made all the changes you wanted to in a Branch a
 To **MERGE** onto a branch in a local repository to the Main branch, use these commands:
 `git checkout main`
 `git merge <branch_name>`
+The merge command allows you to take the changes/commits you made and integrate them into a single branch which will be the main branch. 
+![Merge Visualisation](https://miro.medium.com/max/800/1*iB8lNrITmLvKeL8mnp3qAA.png)
 
-To Merge a branch to a Remote Repository, use the command 
+To Merge a branch to a Remote Repository, use the command: 
 `git push --set-upstream origin <branch_name>`
 This will set the upstream branch to be pushed to the remote repository so it can be uploaded to GitHub.
+![Merge Remote Repository](https://devconnected.com/wp-content/uploads/2019/10/upstream-1-1024x702.png)
 
-To update the main branch you have been working on if the original author makes changes, use the commands
+To update the main branch you have been working on if the original author makes changes, use the commands:
 `git checkout <branch_name>`
 `git merge main`
+Doing these commands will update your branch with the new work that was added to it from other people. It will keep your branch up to date with the new content.
+![Update Main Branch](https://info.varonis.com/hubfs/Imported_Blog_Media/git-merge-to-branch-2.png)
 
 
 
