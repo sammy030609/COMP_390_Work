@@ -4,11 +4,13 @@ The purpose of this tutorial is to teach a user how to upload their small coding
 
 Step 1 - Making a New Repository
 -------
+A Repository in GitHub is a place where you can store files for Projects that you create with all the changes you have worked on on those files. The repository lets you collaborate with others to make changes or comment on aspects of the project. Creating a repository will be the first step in this tutorial to start saving files for your project.
+
 Open up your internet browser and go to the [GitHub](https://github.com/) website. Create an account if you don't have one already. Once you have an account, click the **(+)** button next to your profile pic in the right corner and click **New Repository**.  After doing so, fill in the new Repository name and description of your new project. ![New Repository Screen](https://git-scm.com/book/en/v2/images/newrepoform.png)
 
 Step 2 - Open Command Line App
 -----------
-After you have created a new repository, open up Terminal or cmd on your computer. You want to navigate to the directory in your computer that has your project in it. The command to navigate to the directory is:
+After you have created a new repository, open up Terminal (Mac) or cmd (Windows) on your computer. You want to navigate to the directory in your computer that has your project in it. This can be a folder that is stored on your computer and you have to navigate to it through Command Line. The command to navigate to the directory is:
 
 Windows: 
 `cd/directory_name_where_project_is`
@@ -22,19 +24,19 @@ Now that your are in your project's directory in Terminal or cmd, you can initia
 
 `git init`
 
-After the command has finished, you can add all the files from that directory into the local repository by typing: 
+After the command has finished, you can add all the files from that directory into the local repository. A **local repository** is the Git repository that is stored only on your computer and it has not been uploaded to the online GitHub repository if you have not commited any files/changes. It is a way to keep the files from the GitHub repository online on your computer. The command to add the files to the local repository is: 
 
 `git add .`
 
-The add command will move the files to the staging area for the next step. and allow the files in the directory will be ready for committing to the new repository.
+The add command will move the files to the staging area for the next step, and allow the files in the directory will be ready for committing to the new repository. The staging area allows you to see changes made in the files or if there are merge conflicts with the files you are trying to upload. There should not be any problems so far because it is the first time you are adding files to your repository for your project.
 
-Step 4 - Commit to  the Repository and Adding a Remote Repository
+Step 4 - Commit to the Repository and Adding a Remote Repository
 ------
-When committing something in Git, it adds to file to the Local Repository on your computer which allows those files to be uploaded to GitHub for the final step. Type the command to commit the files: 
+When committing something in Git, it adds the files from the Local Repository on your computer which allows those files to be uploaded to GitHub for the final step. Type the command to commit the files: 
 
 `git commit -m "A commit note"`
 
-I would name the commit after what you are uploading to GitHub like "Coding Project".
+I would name the commit after what you are uploading to GitHub like "Coding Project Code".
 
 The next thing that will need to happen is adding a Remote Repository url so that you can add any files to it that you want to push to your GitHub repository. 
 
@@ -44,13 +46,15 @@ Go into terminal and type:
 ```
 git remote add origin https:github.com/user_name/new_repository_name.git
 ```
-After you press enter, you can now push your project to your local repository.
+After you press enter, you can now push your project to your local repository. This command synced the Remote Repository (or online GitHub repository) with your local repository to keep it up to date with the files you are going to add to it.
 
-Step 4 - Pushing from the Local Repository to GitHub
+Step 5 - Pushing from the Local Repository to GitHub
 ---------
 To upload your project on GitHub after doing all the previous steps, type this into Terminal:
 
 `git push origin master`
+
+This commanded pushed or added the files to the Remote (or online) Repository that you created and now the remote repository should contain the files in the directory that you wanted to add.
 
 Congrats, you know have a new project in your GitHub repository!
 
