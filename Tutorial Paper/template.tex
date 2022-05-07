@@ -29,6 +29,22 @@ This tutorial teaches a person how to match basketball player IDs between differ
 \end{abstract}
 
 \section{Methods}
+The methods for this tutorial is using Python to do the programming. You have to import 4 libraries for this tutorial to work and they are:
+
+\begin{itemize}
+    \item Pandas 0.23.4
+    \item urllib 1.24.1
+    \item BeautifulSoup4 4.6.3
+    \item fuzzywuzzy 0.17.0
+\end{itemize}
+
+The first step of this tutorial is to get the player data from the website \url{stats.nba.com} and the code uses the pandas and urllib3 libraries and I picked the basketball season 2018-19. Then you make a function that extracts the data from the website. It parses the data and converts the objects into a dataframe. The last thing that happens in the function is that the column names are set for the data and the data is saved to a csv file.
+
+The second step for this tutorial is obtaining the basketball data from \url{https://www.basketball-reference.com/}. This part of the code uses the bs4, urllib3 and pandas libraries. The urllib3 library gets the page, bs4 library parses the html and pandas will store the data. Next we set the season to 2019 and initialize an array the is the table and an array for the columns. Then we create a process to request the page on the website and parse the page to extract the column names and the data in the rows. Then we will convert this to a dataframe. Next, there is a function to extract the column names and store them in an array and doing another function for the rows and parsing them for the data. Parsing the rows will get the player id which is what we need so we can compare this website with stats.nba.com and it will also find the anchor tag in the player name. Once the table from these functions are in the dataframe, we set the column names and save them to a CSV file.
+
+The last step to this tutorial is using the data that was parsed and stored to generate a table with the player id of each source and make them matching the specific player. The data that is used to be compared between the sources are assists, filed goal attempts and rebounds. The libraries used are fuzzywuzzy and pandas. Fuzzywuzzy compares the fuzzy strings and pandas reads the csv files and joins them. The first step is to read out the data from both website's csv files and convert the player id to a string. Then we have to map a single season for stats.nba because it is two years of data and we need it to match basketball reference's one year of data. Next was deduplicating the data from basketball reference for the selected stats stated earlier and do the same for stats.nba for the stats to match. Next there has to be a join between the two dataframes created. With this join, it will match the data from both files and the only columns that remain are the player's name and id columns from both sources. With this join, you have to handle the cases where there was no exact data matches and it takes the rows that have null values and separate the frame back into the original data files from the websites. Then we join the data again, but not with the player name as a condition for the join statement and see if the rebounds, assists and field goal attempts match up. Next, we check if the fuzzy name match ratio is higher than 60\% to have accurate data to match and then we merge the fuzzy matches with the exact matches and save the results to a csv file. 
+
+This tutorial should have produce the csv file to have the name of the player from basketball reference and the id used on the website and the name of the player from stats.nba and the id used on the website. This would be good for people who want to know how to match basketball statistics between sources and find out how a player is referenced with a specific id given to them in the website database.
 
 
 \section{Evaluation}
